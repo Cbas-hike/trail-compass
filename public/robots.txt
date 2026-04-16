@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://trailcompass.eu
+
+# Sitemaps
+Sitemap: https://trailcompass.eu/sitemap.xml

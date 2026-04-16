@@ -1,0 +1,113 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --color-primary: #1b3a2d;
+    --color-accent: #e8923a;
+    --color-mid-green: #4a7c59;
+    --color-background: #f7f5f0;
+    --color-dark: #1a2e25;
+    --color-text: #2c2c2c;
+    --color-muted: #6b7280;
+  }
+
+  html {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+      "Helvetica Neue", Arial, sans-serif;
+  }
+
+  body {
+    @apply bg-[#f7f5f0] text-[#2c2c2c] antialiased;
+  }
+
+  h1 {
+    @apply text-4xl font-bold text-[#1a2e25];
+  }
+
+  h2 {
+    @apply text-3xl font-bold text-[#1a2e25] mt-8 mb-4;
+  }
+
+  h3 {
+    @apply text-2xl font-bold text-[#1b3a2d] mt-6 mb-3;
+  }
+
+  h4 {
+    @apply text-xl font-bold text-[#1b3a2d] mt-4 mb-2;
+  }
+
+  p {
+    @apply leading-relaxed mb-4;
+  }
+
+  a {
+    @apply text-[#1b3a2d] underline hover:text-[#e8923a] transition-colors;
+  }
+}
+
+@layer components {
+  .prose {
+    @apply max-w-none;
+  }
+
+  .prose p {
+    @apply leading-7 text-[#2c2c2c] mb-6;
+  }
+
+  .prose a {
+    @apply text-[#1b3a2d] underline hover:text-[#e8923a] transition-colors;
+  }
+
+  .prose ul,
+  .prose ol {
+    @apply pl-6 mb-6;
+  }
+
+  .prose li {
+    @apply mb-2;
+  }
+
+  .btn-primary {
+    @apply inline-block px-6 py-3 bg-[#e8923a] text-white font-bold rounded hover:bg-[#d47e2a] transition-colors;
+  }
+
+  .btn-secondary {
+    @apply inline-block px-6 py-3 bg-[#1b3a2d] text-white font-bold rounded hover:bg-[#152d23] transition-colors;
+  }
+
+  .btn-outline {
+    @apply inline-block px-6 py-3 border-2 border-[#1b3a2d] text-[#1b3a2d] font-bold rounded hover:bg-[#1b3a2d] hover:text-white transition-colors;
+  }
+
+  .container-section {
+    @apply max-w-6xl mx-auto px-4;
+  }
+
+  .gradient-text {
+    @apply bg-gradient-to-r from-[#1b3a2d] to-[#4a7c59] bg-clip-text text-transparent;
+  }
+
+  .badge-difficulty-easy {
+    @apply inline-block px-3 py-1 bg-green-100 text-green-800 text-sm font-bold rounded;
+  }
+
+  .badge-difficulty-moderate {
+    @apply inline-block px-3 py-1 bg-yellow-100 text-yellow-800 text-sm font-bold rounded;
+  }
+
+  .badge-difficulty-hard {
+    @apply inline-block px-3 py-1 bg-orange-100 text-orange-800 text-sm font-bold rounded;
+  }
+
+  .badge-landscape {
+    @apply inline-block px-2 py-1 bg-[#e8f0eb] text-[#1b3a2d] text-xs font-semibold rounded;
+  }
+
+  .card {
+    @apply bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow;
+  }
+
+  .card-image {
+    @apply w-full h-64 object-cover rounded-t-lg;
+  }
+}
